@@ -1,0 +1,13 @@
+version: '3.7'
+services:
+
+    produtos:
+        build: produtos
+
+    nginx:
+        container_name: nginx
+        build: nginx
+        ports:
+            - 80:80
+        depends_on:
+           - produtos
