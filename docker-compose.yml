@@ -3,6 +3,7 @@ services:
 
     produtos:
         build: produtos
+        build: calcados
 
     nginx:
         container_name: nginx
