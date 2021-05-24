@@ -3,6 +3,8 @@ services:
 
     produtos:
         build: produtos
+
+    calcados:
         build: calcados
 
     nginx:
@@ -12,3 +14,4 @@ services:
             - 80:80
         depends_on:
            - produtos
+           - calcados
