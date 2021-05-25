@@ -1,18 +1,20 @@
 const express = require('express')
 const app = express()
 
+const url = 'http://produtos:3000/produtos'
+const axios = require('axios')
+
 const PORT = 3000
 const HOST = '0.0.0.0'
 
-app.get('/calcados', async(req, res) => {
-   
-    try {
-        const response = await fetch('https://localhost:3000/produtos')
-        return res.json(response)
-    }catch (error) {
-        console.error(error)
-    }
+const calcados = f => f.categoria === "calçado"
 
+app.get('/calcados', async(req, res) => {
+    const reponse = await axios(url)
+    const produtos = reponse.data
+    const calc = produtos.filter(calcados)
+    
+    res.json(calc)
 })
 
 app.listen(PORT, HOST, () => {
