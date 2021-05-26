@@ -9,8 +9,8 @@ app.get('/produtos', (req, res) => {
             {id: 1, descricao: 'camiseta tam M', categoria: 'vestuário'},
             {id: 2, descricao: 'vestido tam P', categoria: 'vestuário'},
             {id: 3, descricao: 'bolsa', categoria: 'acessório'},
-            {id: 1, descricao: 'tenis tam 40', categoria: 'calçado'},
-            {id: 1, descricao: 'sandália tam 42', categoria: 'calçado'}
+            {id: 4, descricao: 'tenis tam 40', categoria: 'calçado'},
+            {id: 5, descricao: 'sandália tam 42', categoria: 'calçado'}
         ])
 })
 

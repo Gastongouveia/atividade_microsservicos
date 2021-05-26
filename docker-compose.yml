@@ -6,13 +6,9 @@ services:
 
     calcados:
         build: calcados
-        depends_on:
-            - produtos
 
     vestuario:
         build: vestuario
-        depends_on:
-            - produtos
 
     nginx:
         container_name: nginx
@@ -22,3 +18,4 @@ services:
         depends_on:
            - produtos
            - calcados
+           - vestuario
